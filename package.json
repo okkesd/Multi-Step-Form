@@ -1,7 +1,7 @@
 {
   "name": "multi-step-form",
   "version": "0.1.0",
-  "homepage":"https://okkesd.github.io/Multi-Step-Form",
+  "homepage": "https://okkesd.github.io/Multi-Step-Form",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
@@ -38,5 +38,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^5.0.0"
   }
 }

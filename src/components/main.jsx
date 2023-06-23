@@ -123,9 +123,11 @@ export default function Main(){
             isEmailTrue(email!="" && /^[a-zA-Z0-9.,]*@[a-zA-Z0-9.,]*$/.test(email))
         } else {
             isNameTrue(true)
+            console.log("name true email checkcing")
             isEmailTrue(email!="" && /^[a-zA-Z0-9.,]*@[a-zA-Z0-9.,]*$/.test(email))
-            if (emailTrue){
+            if (email!="" && /^[a-zA-Z0-9.,]*@[a-zA-Z0-9.,]*$/.test(email)){
                 setNum(num+1)
+                console.log("name true email true")
             } else {
                 alert("email is invalid")
             }

@@ -126,6 +126,8 @@ export default function Main(){
             isEmailTrue(email!="" && /^[a-zA-Z0-9.,]*@[a-zA-Z0-9.,]*$/.test(email))
             if (emailTrue){
                 setNum(num+1)
+            } else {
+                alert("email is invalid")
             }
         }
     } else if (num == 2) {

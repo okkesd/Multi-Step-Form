@@ -7,25 +7,58 @@
 }
 p{margin: 0;}
 body{
-    background-color: rgb(164, 174, 188);
-    margin: 0;
+  background-color: rgb(164, 174, 188);
+  margin: 0;
 }
-#root{
-    background-color: rgb(164, 174, 188);
+.full-body{
+  background-color: rgb(164, 174, 188);
+  display: grid;
+  height: 100vh;
 }
+.full-body-dark{
+  background-color: rgb(39, 1, 91);
+  display: grid;
+  height: 100vh;
+}
+
 .title{
   text-align: center;
-  margin: 25px;
+  margin: 10px;
   font-size: 1.9rem;
-  background: linear-gradient(to right, rgb(201, 195, 247), rgb(21, 5, 245));
+  background: linear-gradient(to right, rgb(115, 109, 168), rgb(5, 113, 245));
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
 }
+.navbar{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-right: 100px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  gap: 500px;
+}
+.information{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 30px;
+  padding-bottom: 10px;
+}
 .developer{
   text-align: right;
   margin-right: 40px;
-  background: linear-gradient(to right, rgb(249, 245, 245), rgb(62, 42, 193));
+  background: linear-gradient(to right, rgb(143, 136, 186), rgb(62, 42, 193));
+  background-clip: text;
+  -webkit-background-clip: text;
+  display: inline;
+  color: transparent;
+  font-size: 1.1rem;
+}
+.link-to-github{
+  font-size: 1.1rem;
+  background: linear-gradient(to right, rgb(82, 79, 79), rgb(62, 42, 193));
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
@@ -41,12 +74,24 @@ body{
     padding: 15px;
     border-radius: 15px;
 }
+.main-dark{
+  background-color: rgb(84, 68, 125);
+  width: 1000px;
+  height: 580px;
+  margin: auto;
+  margin-top: 30px;
+  display: flex;
+  justify-content:space-between;
+  padding: 15px;
+  border-radius: 15px;
+  color: white;
+}
 .main-left{
-    background-color: rgb(72,62,255);
-   /* background-image: url("../public/img/background.png");
-    background-size: 400px auto;*/
-    width: 30%;
-    border-radius: 10px;
+  background: linear-gradient(to bottom, rgb(177, 3, 252), rgb(22, 124, 239));
+  /* background-image: url("../public/img/background.png");
+  background-size: 400px auto;*/
+  width: 30%;
+  border-radius: 10px;
 }
 .main-right{
     margin-right: 130px;
@@ -88,7 +133,9 @@ body{
     background-color: rgb(112, 183, 238);
     color: rgb(30,30,30);
 }
-
+.form-1-input-dark{
+  background-color: rgb(179, 148, 247);
+}
 .form-1-form > input{
     border: 1px solid;
     border-color: rgba(49, 46, 46, 0.2);
@@ -185,6 +232,12 @@ body{
     border-radius: 6px;
     margin-top:30px;
 }
+.main-div-checkbox-dark{
+  background-color: rgb(21, 86, 143);
+  border-radius: 6px;
+  margin-top:30px;
+  
+}
 .cards{
     display:flex;
     justify-content: space-evenly;
@@ -275,6 +328,42 @@ body{
     position: relative;
     top:72px;
     align-items: center;
+}
+.form-2-back-dark{
+  border:1px solid rgba(203, 195, 195, 0.5);
+  border-radius: 5px;
+  height:2.2em;
+  background-color: rgb(67, 59, 219);
+  color: rgba(204, 196, 196, 0.7);
+  font-weight: 600;
+  font-size: large;
+  position: relative;
+  top:70px;
+  align-items: center;
+}
+.form-3-back-dark{
+  border:1px solid rgba(203, 195, 195, 0.5);
+  border-radius: 5px;
+  height:2.2em;
+  background-color: rgb(67, 59, 219);
+  color: rgba(204, 196, 196, 0.7);
+  font-weight: 600;
+  font-size: large;
+  position: relative;
+  top:62px;
+  align-items: center;
+}
+.form-4-back-dark{
+  border:1px solid rgba(203, 195, 195, 0.5);
+  border-radius: 5px;
+  height:2.2em;
+  background-color: rgb(67, 59, 219);
+  color: rgba(204, 196, 196, 0.7);
+  font-weight: 600;
+  font-size: large;
+  position: relative;
+  top:58px;
+  align-items: center;
 }
 .form-3{
     position: relative;
@@ -674,4 +763,114 @@ complete order butonu css
   top: 50px;
   transform: scale(0.7);
   background-color: rgb(15, 1, 179);
+}
+
+/*theme changer button css*/
+
+.switch {
+  font-size: 17px;
+  position: relative;
+  display: inline-block;
+  width: 64px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider-theme {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #73C0FC;
+  transition: .4s;
+  border-radius: 30px;
+}
+
+.slider-theme:before {
+  position: absolute;
+  content: "";
+  height: 30px;
+  width: 30px;
+  border-radius: 20px;
+  left: 2px;
+  bottom: 2px;
+  z-index: 2;
+  background-color: #e8e8e8;
+  transition: .4s;
+}
+
+.sun svg {
+  position: absolute;
+  top: 6px;
+  left: 36px;
+  z-index: 1;
+  width: 24px;
+  height: 24px;
+}
+
+.moon svg {
+  fill: #73C0FC;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  z-index: 1;
+  width: 24px;
+  height: 24px;
+}
+
+/* .switch:hover */.sun svg {
+  animation: rotate 15s linear infinite;
+}
+
+@keyframes rotate {
+ 
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* .switch:hover */.moon svg {
+  animation: tilt 5s linear infinite;
+}
+
+@keyframes tilt {
+ 
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(-10deg);
+  }
+
+  75% {
+    transform: rotate(10deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.input-theme:checked + .slider-theme {
+  background-color: #183153;
+}
+
+.input-theme:focus + .slider-theme {
+  box-shadow: 0 0 1px #183153;
+}
+
+.input-theme:checked + .slider-theme:before {
+  transform: translateX(30px);
 }

@@ -1,12 +1,13 @@
 import {React, useRef, useState} from "react";
 
+
 export default function Form2({next, back, divFirst, setDivFirst, divSecond, setDivSecond, 
-    divThird, setDivThird, isYearOrMonth, setYearOrMonth, price, setPrice}){
+    divThird, setDivThird, isYearOrMonth, setYearOrMonth, price, setPrice, theme}){
 
     // set what gonna happen to plan-cards when user choose a plan
-    let styleFirst = divFirst ? "3px solid blue" : "1px solid rgba(49, 46, 46, 0.2)"
-    let styleSecond = divSecond ?  "3px solid blue": "1px solid rgba(49, 46, 46, 0.2)"
-    let styleThird = divThird ? "3px solid blue" :"1px solid rgba(49, 46, 46, 0.2)"
+    let styleFirst = divFirst ? theme ? "4px solid rgb(121, 137, 166)" :"3px solid purple" : "1px solid rgba(49, 46, 46, 0.2)"
+    let styleSecond = divSecond ?  theme ? "4px solid rgb(121, 137, 166)" :"3px solid purple": "1px solid rgba(49, 46, 46, 0.2)"
+    let styleThird = divThird ? theme ? "4px solid rgb(121, 137, 166)" :"3px solid purple" :"1px solid rgba(49, 46, 46, 0.2)"
     let backFirst = divFirst ? "rgb(207, 208, 209)" : "white"
     let backSecond = divSecond ? "rgb(207, 208, 209)" : "white"
     let backThird = divThird ? "rgb(207, 208, 209)" : "white"
@@ -63,28 +64,28 @@ export default function Form2({next, back, divFirst, setDivFirst, divSecond, set
             <div className="cards">
 
                 {/* first plan */}
-                <div className="cards-div" style={{border : styleFirst, backgroundColor: backFirst}} onClick={handleClick}>
-                    <img src="./img/icon-arcade.png" />
+                <div className="cards-div" style={{border : styleFirst, backgroundColor: theme ? "rgb(35, 79, 161)" : backFirst}} onClick={handleClick}>
+                    <img src={process.env.PUBLIC_URL + '/img/icon-arcade.png'} width={40} alt="olmuyor"/>
                     <strong><p className="strong-p">Arcade</p></strong>
                     {isYearOrMonth ? <p style={{ opacity: "0.5" }}>$108/{moye}</p>: <p style={{ opacity: "0.5" }}>$9/{moye}</p>}
                 </div>
 
                 {/* second plan */}
-                <div className="cards-div" style={{border: styleSecond, backgroundColor: backSecond}} onClick={handleClickSecond}>
-                    <img src="./img/icon-advanced.png" />
+                <div className="cards-div" style={{border: styleSecond, backgroundColor: theme ? "rgb(35, 79, 161)" : backSecond}} onClick={handleClickSecond}>
+                    <img src={process.env.PUBLIC_URL + '/img/icon-advanced.png'} />
                     <strong><p className="strong-p">Advanced</p></strong>
                     {isYearOrMonth ? <p style={{ opacity: "0.5" }}>$144/{moye}</p>: <p style={{ opacity: "0.5" }}>$12/{moye}</p>}
                 </div>
 
                 {/* third plan */}
-                <div className="cards-div" style={{border: styleThird, backgroundColor: backThird}} onClick={handleClickThird}>
-                    <img src="./img/icon-pro.png" />
+                <div className="cards-div" style={{border: styleThird, backgroundColor: theme ? "rgb(35, 79, 161)" : backThird}} onClick={handleClickThird}>
+                    <img src={process.env.PUBLIC_URL + '/img/icon-pro.png'}/>
                     <strong><p className="strong-p">Pro</p></strong>
                     {isYearOrMonth ? <p style={{ opacity: "0.5" }}>$180/{moye}</p>: <p style={{ opacity: "0.5" }}>$15/{moye}</p>}
                 </div>
             </div>
         {/* monthly yearly checkbox */}
-        <div className="main-div-checkbox">
+        <div className={theme ? "main-div-checkbox-dark" : "main-div-checkbox"}>
             <div className="div-checkbox">
                 <p>Monthly</p>
                 <label className="switch">
@@ -96,7 +97,7 @@ export default function Form2({next, back, divFirst, setDivFirst, divSecond, set
         </div>
 
         <div className="form-2-buttons">
-            <button className="form-2-back" onClick={back}>Go Back</button>
+            <button className={theme ? "form-2-back-dark":"form-2-back"} onClick={back}>Go Back</button>
         </div>
         <div className="form-2-buttons">
             <button className="form-2-next" onClick={next}>Next Step</button>

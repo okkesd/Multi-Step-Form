@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 
-export default function Solid({one, two, three, four, num}){
+export default function Solid({one, two, three, four, num, theme}){
 
     let backGround = "rgba(95, 182, 250)"
 

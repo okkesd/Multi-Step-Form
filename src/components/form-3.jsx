@@ -1,7 +1,7 @@
 import { React, useState } from "react";
 
 export default function Form3({next, back, addFirst, setAddFirst, addSecond, setAddSecond, addThird,
-                               setAddThird, isYearOrMonth}){
+                               setAddThird, isYearOrMonth, theme}){
 
     // set what's gonna happen when user clicks on an add-on
     let styleFirst = addFirst ? "2px solid blue": "none"
@@ -49,7 +49,7 @@ export default function Form3({next, back, addFirst, setAddFirst, addSecond, set
         </div>
         
         <div className="form-3-buttons">
-            <button className="form-3-back" onClick={back}>Go Back</button>
+            <button className={theme ? "form-3-back-dark" : "form-3-back"} onClick={back}>Go Back</button>
         </div>
         <div className="form-3-buttons">
             <button className="form-3-next" onClick={next}>Next Step</button>

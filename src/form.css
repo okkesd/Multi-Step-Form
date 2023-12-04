@@ -55,6 +55,8 @@ body{
   display: inline;
   color: transparent;
   font-size: 1.1rem;
+  transition: all 0.3s;
+  cursor: default;
 }
 .link-to-github{
   font-size: 1.1rem;
@@ -62,6 +64,15 @@ body{
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.link-to-github:hover, .developer:hover{
+  background: linear-gradient(to right, rgb(115, 111, 111), rgb(143, 129, 236));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  transform: scale(1.1);
 }
 .main{
     background-color: white;
@@ -122,16 +133,9 @@ body{
     height: 30px;
 }
 .main-left-button:hover{
-    background-color: rgb(190, 225, 252);
+    background-color: rgb(123, 183, 229);
     color: rgb(30,30,30);
     box-shadow: 5px 5px 7px  rgb(8, 7, 32);
-}
-.main-left-button:active{
-    background-color: red;
-}
-.main-left-button:focus{
-    background-color: rgb(112, 183, 238);
-    color: rgb(30,30,30);
 }
 .form-1-input-dark{
   background-color: rgb(179, 148, 247);
@@ -142,7 +146,7 @@ body{
     margin-bottom: 18px;
     border-radius: 7px;
     width: 350px;
-    height: 30px;
+    height: 35px;
     text-indent: 10px;
 }
 .form-1-form > input:focus{
@@ -182,6 +186,14 @@ body{
     margin-top: 5px;
 }
 
+.slider-year-month{
+  cursor: pointer;
+  transition: color 0.3s ease-out;
+}
+.slider-year-month:hover{
+  color: #d524de;
+  transform: scale(1.05);
+}
 .checkbox:checked ~ .slider::before{
     transform: translateX(30px);
     box-shadow: 0 0 10px 3px rgb(0, 0, 0, 0.25);
@@ -252,6 +264,10 @@ body{
     border-color: rgba(49, 46, 46, 0.2);
     border-radius: 10px;
     text-align: left;
+    transition: all 0.1s;
+}
+.cards-div:hover{
+  transform: scale(1.1);
 }
 .strong-p {
     margin-top: 35px;
@@ -277,6 +293,7 @@ body{
     position: relative;
     left:245px;
     top:43px;
+    transition: all 0.3s;
 }
 .form-3-next{
     width: 100px;
@@ -375,15 +392,21 @@ body{
     margin-top: 30px;
 }
 .add-ons{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-left: 10px;
-    padding-right: 10px;
-    box-shadow: 0px 0px 5px rgba(49, 46, 46, 0.3);
-    margin-bottom: 20px;
-    height: 70px;
-    border-radius: 7px;;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+  margin-bottom: 20px;
+  height: 70px;
+  border-radius: 7px;
+  transition: all 0.2s;
+}
+.add-ons:hover{
+  transform: scaleX(1.06);
+  background-color: rgba(94, 94, 94, 0.3);
 }
 .add-ons-left{
     display: flex;
@@ -774,7 +797,6 @@ complete order butonu css
   width: 64px;
   height: 34px;
 }
-
 .switch input {
   opacity: 0;
   width: 0;

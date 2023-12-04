@@ -87,12 +87,12 @@ export default function Form2({next, back, divFirst, setDivFirst, divSecond, set
         {/* monthly yearly checkbox */}
         <div className={theme ? "main-div-checkbox-dark" : "main-div-checkbox"}>
             <div className="div-checkbox">
-                <p>Monthly</p>
+                <p className="slider-year-month" onClick={()=> {setYearOrMonth(false)}} >Monthly</p>
                 <label className="switch">
                 <input type="checkbox" className="checkbox" ref={checkbox} checked={isYearOrMonth} onChange={handleChange}/>
-        <div className="slider"></div>
-            </label>
-            <p>Yearly</p> 
+                <div className="slider"></div>
+                </label>
+                <p className="slider-year-month" onClick={()=> {setYearOrMonth(true)}}>Yearly</p> 
         </div>
         </div>
 

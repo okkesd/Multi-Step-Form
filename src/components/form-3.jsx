@@ -4,9 +4,9 @@ export default function Form3({next, back, addFirst, setAddFirst, addSecond, set
                                setAddThird, isYearOrMonth, theme}){
 
     // set what's gonna happen when user clicks on an add-on
-    let styleFirst = addFirst ? "2px solid blue": "none"
-    let styleSecond = addSecond ? "2px solid blue" : "none"
-    let styleThird = addThird ? "2px solid blue" : "none" 
+    let styleFirst = addFirst ? {border:"3px solid transparent", borderImage:"linear-gradient(to right, blue , purple) 1"}: {border:"none"}
+    let styleSecond = addSecond ? {border:"3px solid transparent", borderImage:"linear-gradient(to right, blue , purple) 1"}: {border:"none"}
+    let styleThird = addThird ? {border:"3px solid transparent", borderImage:"linear-gradient(to right, blue , purple) 1"}: {border:"none"} 
 
 
 
@@ -16,7 +16,7 @@ export default function Form3({next, back, addFirst, setAddFirst, addSecond, set
 
         {/* add-on 1 */}
         <p style={{ opacity: "0.5", marginBottom: 30 }}>Add-ons help emphance your gaming experience</p>
-        <div className="add-ons" id="add-on-1" style={{border : styleFirst}} onClick={()=>setAddFirst(!addFirst)}>
+        <div className="add-ons" id="add-on-1" style={styleFirst} onClick={()=>setAddFirst(!addFirst)}>
             <div className="add-ons-left" >
                 <div>
                 <strong>Online Service</strong>
@@ -27,7 +27,7 @@ export default function Form3({next, back, addFirst, setAddFirst, addSecond, set
         </div>
 
         {/* add-on 2 */}
-        <div className="add-ons" id="add-on-2" style={{border : styleSecond}} onClick={()=>setAddSecond(!addSecond)}>
+        <div className="add-ons" id="add-on-2" style={styleSecond} onClick={()=>setAddSecond(!addSecond)}>
             <div className="add-ons-left">
                 <div>
                 <strong>Larger storage</strong>
@@ -38,7 +38,7 @@ export default function Form3({next, back, addFirst, setAddFirst, addSecond, set
         </div>
 
         {/* add-on 3 */}
-        <div className="add-ons" id="add-on-3" style={{border : styleThird}} onClick={()=>setAddThird(!addThird)}>
+        <div className="add-ons" id="add-on-3" style={styleThird} onClick={()=>setAddThird(!addThird)}>
             <div className="add-ons-left">
                 <div>
                 <strong>Customizable profile</strong>

@@ -9,7 +9,7 @@ export default function Form1({next, setName, name, setEmail, email, phone, setP
             <h1>Personal Info</h1>
             <p style={{opacity:0.3, marginBottom:25}}>Please provide your name, email addres and phone number.</p>
             <div className="form-1-form">
-
+ 
                  {/* controlled name input that has error states depends on nameTrue state */}
                 <label htmlFor="form-1-name" style={{color: nameTrue ? theme? "white" :"black" : "red"}}>Name *</label> <br />
                 <input type="text" name="name" id={nameTrue? "form-1-name" : "form-1-name-wrong"} className={theme ? "form-1-input-dark" : ""}
@@ -22,7 +22,7 @@ export default function Form1({next, setName, name, setEmail, email, phone, setP
                 onChange={(e)=> setEmail (e.target.value)} autoComplete="off" className={theme ? "form-1-input-dark" : ""}
                 style={{borderColor: emailTrue ? "rgba(49, 46, 46, 0.2)" : "red"}}/> <br />
                 
-                {/* controlled phone number input from "https://www.geeksforgeeks.org/how-to-add-phone-number-input-in-react-js/" */}
+                {/* controlled phone number input */}
                 <label htmlFor="form-1-tel" style={{color: phoneTrue ? theme? "white" :"black" : "red"}}>Phone Number *</label> <br />
                 <input type="text" name="Phone-number" id="form-1-tel" value={phone} onChange={(e)=> {setPhone(e.target.value)}} autoComplete="off"
                 className={theme ? "form-1-input-dark" : ""}/>
